@@ -1,0 +1,76 @@
+header{
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 10;
+    .header-wrapper{
+        margin: 0 -15px;
+        background-color: @color-black;
+        position: relative;
+        .flex(space-between, center, center, nowrap);
+        .logo-wrapper,
+        .phone-wrapper { flex: 1; text-align: center }
+        .phone-wrapper {
+            background-color: @color-green;
+            align-self: stretch;
+            padding: 30px 0;
+            > div {margin: 7px 0}
+            .phone{
+                text-decoration: none;
+                color: #fff;
+                font-weight: 600;
+                font-size: 23px;
+            }
+            @media (max-width: @screen-md-max) {
+                padding: 30px 15px;
+            }
+        }
+        .main-menu-wrapper { flex: 3; }
+        @media (max-width: @screen-sm-max) {
+            .phone-wrapper{
+                padding: 15px 6px;
+                .phone{ font-size: 18px}
+            }
+        }
+        @media (max-width: @screen-xs-max) {
+            -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap;
+            .phone-wrapper{
+                order: 2;
+                flex: 1;
+                padding: 8px 15px;
+                background-color: @color-black;
+                align-self: center;
+                .phone{
+                    font-size: 15px;
+                    margin-top: 6px;
+                    display: inline-block;
+                }
+            }
+            .logo-wrapper{
+                flex: 1;
+                order: 1;
+                padding-left: 15px;
+            }
+            .main-menu-wrapper{
+                flex: 1 100%;
+                order: 0;
+                background-color: @color-green;
+
+            }
+        }
+    }
+    @media (max-width: @screen-xs-max) {
+        margin-bottom: 0;
+    }
+}
+.logo{
+    margin: 30px 0;
+    display: inline-block;
+    background: url("../img/logo.png")no-repeat 0 0;
+    background-size: contain;
+    width: 162px;
+    height: 81px;
+    @media (max-width: @screen-sm-max) {
+        width: 110px;
+        height: 60px;
+    }
+}

@@ -1,0 +1,33 @@
+footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 300px;
+    padding: 50px 0 0;
+    background-color: @color-black;
+    color: #fff;
+    .footer-header{
+        font-size: 30px;
+        font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 34px;
+        margin-bottom: 34px;
+        background: url("../img/divider2.png")no-repeat center bottom;
+    }
+    .contact-block{
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 50px;
+        p{margin-bottom: 0}
+        a{ color: #fff}
+        .phone{text-decoration: none}
+    }
+    .copyright{ font-size: 13px; }
+    .kawev{ font-size: 13px; }
+    @media (max-width: @screen-sm-max) {
+        position: static;
+        height: auto;
+        .footer-header{ font-size: 22px; }
+    }
+}
